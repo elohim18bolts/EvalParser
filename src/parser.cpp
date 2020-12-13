@@ -3,9 +3,14 @@
 #include <vector>
 #include <string>
 
-namespace Parser
+namespace parser
 {
     Parser::Parser(const std::string &s) : rawString(s)
+    {
+        cursor = &rawString[0];
+    }
+
+    Parser::Parser(const Parser &other) : rawString(other.rawString)
     {
         cursor = &rawString[0];
     }
@@ -96,4 +101,4 @@ namespace Parser
         return tokens;
     }
 
-} // namespace Parser
+} // namespace parser

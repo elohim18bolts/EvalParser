@@ -14,6 +14,7 @@ enable_testing()
 set(SRC 
     src/token.cpp
     src/parser.cpp
+    src/eval.cpp
 )
 include_directories(include googletest/googletest/include googletest/googletest/src)
 add_library(${this} STATIC ${SRC}) 

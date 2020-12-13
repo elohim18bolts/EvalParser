@@ -1,7 +1,7 @@
 #include "token/token.hpp"
 #include <string>
 #include <sstream>
-namespace Parser
+namespace parser
 {
     Token::Token(const std::string &token, TokenType type) : type(type)
     {
@@ -86,4 +86,16 @@ namespace Parser
     {
         return type;
     }
-} // namespace Parser
+    bool Token::HasValue()
+    {
+        return type == TokenType::NUMBER ? true : false;
+    }
+    double Token::GetValue()
+    {
+        return value;
+    }
+    TokenValue Token::GetValueType()
+    {
+        return valueType;
+    }
+} // namespace parser

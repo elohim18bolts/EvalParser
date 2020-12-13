@@ -2,7 +2,7 @@
 #define PARSER_HPP
 #include <vector>
 #include "token/token.hpp"
-namespace Parser
+namespace parser
 {
     class Parser
     {
@@ -28,9 +28,11 @@ namespace Parser
 
     public:
         Parser(const std::string &);
+        Parser() = default;
+        Parser(const Parser &);
         std::vector<Token> GetTokens() const;
         void Parse();
     };
-} // namespace Parser
+} // namespace parser
 
 #endif

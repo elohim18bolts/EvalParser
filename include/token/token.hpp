@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace Parser
+namespace parser
 {
 
     enum class TokenType
@@ -60,7 +60,10 @@ namespace Parser
     public:
         std::string GetToken() const;
         TokenType GetType();
+        double GetValue();
+        TokenValue GetValueType();
+        bool HasValue();
     };
-} // namespace Parser
+} // namespace parser
 
 #endif
